@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+     <!-- Add this form in your EJS file -->
+<form action="/book" method="get">
+    <label for="country">Filter by Country:</label>
+    <input type="text" name="country" id="country" placeholder="Enter country">
+    <button type="submit">Filter</button>
+<!-- 
+    <label for="language">Filter by language:</label>
+    <input type="text" name="language" id="language" placeholder="Enter language">
+    <button type="submit">Filter</button> -->
+
+  </form>
+
+  <form action="/book" method="get">
+    <label for="language">Filter by language:</label>
+    <input type="text" name="language" id="language" placeholder="Enter language">
+    <button type="submit">Filter</button>
+  </form> 
+
+  <!-- <form action="/book" method="get">
+    <label for="country">Filter by Country:</label>
+    <input type="text" name="country" id="country" placeholder="Enter country">
+    
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" placeholder="Enter title">
+    
+    <label for="language">Language:</label>
+    <input type="text" name="language" id="language" placeholder="Enter language">
+    
+    <label for="year">Year:</label>
+    <input type="text" name="year" id="year" placeholder="Enter year">
+    
+    <button type="submit">Filter</button>
+</form> -->
+
+
+    <% book.forEach(function(book) { %>
+        <p><img src="${imgLink}"></p>
+        <p>
+            <%= book.id %>
+        </p>
+        <p>
+            <%= book.author %>
+        </p>
+        <p>
+            <%= book.country %>
+        </p>
+        <!-- <p><%= book.imgpnk %></p> -->
+        <!-- const imgpnk = book.imgpnk; -->
+         
+
+        <p>
+            <%= book.language %>
+        </p>
+        <p>
+            <%= book.link %>
+        </p>
+        <p>
+            <%= book.pages %>
+        </p>
+        <p>
+            <%= book.title %>
+        </p>
+        <p>
+            <%= book.year %>
+        </p>
+        <p>
+            <%= book.price %>
+        </p>
+        <br/>
+        <br/>
+        <% }) %>
+
+
+       
+  
+</body>
+
+</html>
